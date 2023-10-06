@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var text1 = "   Çağatay Yıldız";
+    //1) "  Çağatay Yıldız" isimli metindeki boşlukları kaldır.    (REPLACE)
+    replacedFirstName = text1.replace(/\s+/g, '');
+
+    console.log(replacedFirstName);
+
+    // 2) "cagatay yildiz" kelimesindeki boşlukları temizle ve tüm harfleri büyült ( REPLACE ve UPPER)
+    var text2 = "cagatay yildiz";
+
+    UppercasedFirstName = text2.replace(/\s+/g, '').toUpperCase();
+
+    console.log(UppercasedFirstName);
+
+    //3) "******Çağatay Yıldız" isimli metindeki yıldızları kaldır (REPLACE)
+    var text3 = "******Çağatay Yıldız";
+
+    UppercasedFirstName2 = text3.replace('*', '');
+
+    console.log(UppercasedFirstName2);
+
+    //4) "Çağatay  Yıldız" metnindeki kelimeler arasında 2 boşluk var bunu bir boşluk yap (REPLACE)
+    var text4 = "Çağatay  Yıldız";
+
+    replacedFirstName2 = text4.replace(/\s+/g, ' ');
+
+    console.log(replacedFirstName2);
+
+    //5) "**Tech Career**" isimli metindeki yıldızları kaldır (REPLACE)
+    var text5 = "**Tech Career**";
+
+    replacedFirstName3 = text5.replace(/\*/g, '');
+
+    console.log(replacedFirstName3);
+
+    //6) "Tech Career" isimli metnin soluna ve sağına 3 yıldız koy. "***Tech Career***" ( Normal toplama operatörü)
+    var text6 = "Tech Career";
+
+    replacedFirstName4 = "***" + text6 + "***";
+
+    console.log(replacedFirstName4);
+
+    //7) "Tech Career Bilişim teknolojileri" metnindeki son kelimeyi büyült (SUBSTRING)
+    var text7 = "Tech Career Bilişim teknolojileri";
+    var splitWords = text7.split(' '); 
+    var lastWord = splitWords[splitWords.length - 1]; 
+    var finalText = text7.replace(lastWord, lastWord.toUpperCase());
+    console.log(finalText);
+
+    //8) "tech bilişim" kelimelerin ilk harflerini büyült (Substring ve upper)
+    var  text8 = "tech bilişim";
+    var words = text8.split(' '); 
+    var fianlText2 = words.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+
+    console.log(fianlText2);
+
+</script>
+
+</html>
