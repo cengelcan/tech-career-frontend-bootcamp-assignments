@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // "Tech Career" metnini tersten yazdır
+    const text = "Tech Career";
+    const reverseText = text.split('').reverse().join('');
+
+    console.log(reverseText);
+
+    // var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki SADECE poizitif sayıların toplamını ekrana yaz
+    var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11];
+    var positiveNumbersSum = 0;
+
+    for (var i = 0; i < numbers.length; i++) {
+        if (numbers[i] > 0) {
+            positiveNumbersSum += numbers[i];
+        }
+    }
+
+    console.log("Sum of positive numbers: " + positiveNumbersSum);
+
+
+
+    // var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11] bu dizideki en büyük sayı hangisidir?
+    var numbers = [-22, 5, 11, 78, -4, -250, 35, 56, 11, 24, 77, 11];
+    var largestNumber = numbers[0];
+
+    for (var i = 1; i < numbers.length; i++) {
+        if (numbers[i] > largestNumber) {
+            largestNumber = numbers[i];
+        }
+    }
+
+    console.log("Largest number: " + largestNumber);
+
+
+    //1-50 arası sayılar içinde 3’e veya 5’e tam bölünebilen sayıları console a yaz ve kaç adet olduğunu console yaz.
+    var divisibleNumbers = [];
+    var count = 0;
+
+    for (var i = 1; i <= 50; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            divisibleNumbers.push(i);
+            count++;
+        }
+    }
+
+    console.log("3'e veya 5'e tam bölünebilen sayılar: " + divisibleNumbers);
+    console.log("Toplam " + count + " adet sayı bulundu.");
+
+</script>
+
+</html>
