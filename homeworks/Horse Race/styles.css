@@ -1,0 +1,33 @@
+.horse{
+    width: 160px;
+    height: 100px;
+    position: relative;
+}
+
+.track{
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    position: relative;
+}
+
+.finish-line{
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    right: 20px;
+
+    border-left: 10px solid white;
+}
+
+.result{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+}
+
+.controller{
+    text-align: center;
+    padding: 10px;
+}
